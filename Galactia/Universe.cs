@@ -22,10 +22,7 @@ namespace Galactia
             public int Y { get; set; }
 
             // ToString to convert and override "Position"
-            public override string ToString()
-            {
-                return $"({X},{Y})";
-            }
+            public override string ToString() => $"({X},{Y})";
         }
     }
     #endregion

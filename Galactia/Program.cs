@@ -264,9 +264,9 @@ Moon mimas = new Moon();
     mimas.Distance(saturn);
 }
 #endregion
+// Foreach to output data froms lists
 foreach (var planet in sun.PlanetList)
 {
-
     Console.WriteLine($"" +
         $"\nName: {planet.Name}" +
         $"\nId: {planet.ID}" +
