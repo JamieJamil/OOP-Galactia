@@ -1,21 +1,16 @@
 ﻿namespace Galactia
 {
-    internal class StarType
+    // Star class inherits from SpaceObject.
+    internal class StarType : SpaceObject
     {
-        // Enum with named members
+        // Enum with named members.
+
         public enum Startype
         {
             YellowDwarf, White, BlueNeutron, RedGiant
         }
-        // Star class inherits from SpaceObject
-        internal class Star : SpaceObject
-        {
-            public Startype Type { get; set; }
-            public int Temperature { get; set; }
-            public List<Planet>? PlanetList { get; set; }
-            // Position from 
-            public override Position PositionToString { get; set; } = new Position() { X = 0, Y = 0 };
-
-        }
+        public Startype Type { get; set; }
+        public int Temperature { get; set; }
+        public List<Planet> PlanetList { get; set; }
     }
 }
