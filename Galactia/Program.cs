@@ -1,6 +1,6 @@
-﻿using Galactia;
+﻿using Galactica;
 using System.Diagnostics.Metrics;
-using static Galactia.SpaceObject;
+using static Galactica.SpaceObject;
 
 
 StarType sun = new StarType();
@@ -24,28 +24,30 @@ Moon ganymedes = new Moon();
 Moon io = new Moon();
 Moon mimas = new Moon();
 #endregion
+#region 
 {
-    sun.ID = 1;
-    sun.Name = "Sun";
-    sun.Type = StarType.Startype.YellowDwarf;
-    sun.PositionToString.X = 0;
-    sun.PositionToString.Y = 0;
-    sun.Temperature = 150000000;
-    sun.PlanetList.Add(mercury);
-    sun.PlanetList.Add(venus);
-    sun.PlanetList.Add(earth);
-    sun.PlanetList.Add(mars);
-    sun.PlanetList.Add(jupiter);
-    sun.PlanetList.Add(saturn);
-    sun.PlanetList.Add(uranus);
-    sun.PlanetList.Add(neptune);
+sun.ID = 1;
+sun.Name = "Sun";
+sun.Type = StarType.Startype.YellowDwarf;
+sun.PositionToString.X = 0;
+sun.PositionToString.Y = 0;
+sun.Temperature = 150000000;
+sun.PlanetList.Add(mercury);
+sun.PlanetList.Add(venus);
+sun.PlanetList.Add(earth);
+sun.PlanetList.Add(mars);
+sun.PlanetList.Add(jupiter);
+sun.PlanetList.Add(saturn);
+sun.PlanetList.Add(uranus);
+sun.PlanetList.Add(neptune);
 
-    Console.WriteLine($"" +
-        $"Sar System\nName: {sun.Name}" +
-        $"\nId: {sun.ID}" +
-        $"\nStar type: {sun.Type}" +
-        $"\nPosition: {sun.PositionToString} ");
+Console.WriteLine($"" +
+    $"Sar System\nName: {sun.Name}" +
+    $"\nId: {sun.ID}" +
+    $"\nStar type: {sun.Type}" +
+    $"\nPosition: {sun.PositionToString} ");
 }
+#endregion
 #region PlanetsData
 {
     mercury.ID = 1;
@@ -264,10 +266,11 @@ Moon mimas = new Moon();
     mimas.Distance(saturn);
 }
 #endregion
+#region Foreach
 // Foreach to output data froms lists
 foreach (var planet in sun.PlanetList)
 {
-    Console.WriteLine($"" +
+    Console.WriteLine($"-------------------------------------------------" +
         $"\nName: {planet.Name}" +
         $"\nId: {planet.ID}" +
         $"\ntype: {planet.Type}" +
@@ -289,3 +292,4 @@ foreach (var planet in sun.PlanetList)
             $"\n    Distance to the sun: {moon.Distance(planet)} KM ");
     }
 }
+#endregion
